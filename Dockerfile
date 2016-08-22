@@ -20,6 +20,7 @@ RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 
 # Add the nginx site and config
+COPY nginx.conf /etc/nginx/nginx.conf
 ADD nginx.conf /etc/nginx/sites-enabled/webapp.conf
 ADD rails-env.conf /etc/nginx/main.d/rails-env.conf
 
